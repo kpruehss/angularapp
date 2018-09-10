@@ -1,5 +1,6 @@
 <h2>Users</h2>
 <button
+  (click)="addUser({firstName: 'Mary', lastName: 'Sue', isActive: true})"
   [disabled]="!enableAdd"
   class="btn btn-block mb-3"
 >Add New User</button>
@@ -13,10 +14,13 @@
     [class.bg-light]="user.isActive"
   >
     <h3>{{ user.firstName }} {{
-      user.lastName }}</h3>
+      user.lastName }}<small *ngIf="user.age && user.address"><button
+          class="btn btn-dark btn-sm ml-2"
+          (click)="user.hide = !user.hide"
+        ><i [ngClass]="user.hide ? 'fa fa-plus' : 'fa fa-minus'"></i></button></small></h3>
     <ul
       class="list-group"
-      *ngIf="showExtended && user.age && user.address"
+      *ngIf="!user.hide && user.age && user.address"
     >
       <li class="list-group-item">Age: {{ user.age }}</li>
       <li class="list-group-item">Address: {{ user.address.street }} {{
