@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/User';
+import { NullTemplateVisitor } from '@angular/compiler';
 
 @Component({
   selector: 'app-users',
@@ -7,9 +8,20 @@ import { User } from '../../models/User';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent implements OnInit {
+  user: User = {
+    firstName: '',
+    lastName: '',
+    age: null,
+    address: {
+      street: '',
+      city: '',
+      state: '',
+    },
+  };
   users: User[];
   loaded = true;
-  enableAdd = true;
+  // enableAdd = false;
+  showUserForm = false;
 
   constructor() {}
 
@@ -57,11 +69,26 @@ export class UsersComponent implements OnInit {
     ];
   }
 
-  toggleHide(user: User) {
-    user.hide = !user.hide;
+  addUser() {
+    this.user.isActive = true;
+    this.user.registered = new Date();
+    this.users.unshift(this.user);
+
+    this.user = {
+      firstName: '',
+      lastName: '',
+      age: null,
+      address: {
+        street: '',
+        city: '',
+        state: '',
+      },
+    };
   }
 
-  addUser(user: User) {
-    this.users.push(user);
+  onSubmit(e) {
+    console.log(123);
+
+    e.preventDefault();
   }
 }
