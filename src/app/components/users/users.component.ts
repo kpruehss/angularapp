@@ -10,6 +10,7 @@ export class UsersComponent implements OnInit {
   users: User[];
   showExtended = true;
   loaded = true;
+  enableAdd = true;
 
   constructor() {}
 
@@ -21,9 +22,10 @@ export class UsersComponent implements OnInit {
         age: 30,
         address: {
           street: '50 Main Str.',
-          city: 'Melbourne',
+          city: 'Monash',
           state: 'VIC',
         },
+        image: 'http://lorempixel.com/600/600/people/3',
       },
       {
         firstName: 'Kevin',
@@ -34,6 +36,7 @@ export class UsersComponent implements OnInit {
           city: 'Mildura',
           state: 'VIC',
         },
+        image: 'http://lorempixel.com/600/600/people/2',
       },
       {
         firstName: 'Karen',
@@ -44,13 +47,14 @@ export class UsersComponent implements OnInit {
           city: 'Geelong',
           state: 'VIC',
         },
+        image: 'http://lorempixel.com/600/600/people/1',
       },
     ];
 
-    this.addUser({
-      firstName: 'David',
-      lastName: 'Jackson',
-    });
+    // this.addUser({
+    //   firstName: 'David',
+    //   lastName: 'Jackson',
+    // });
   }
 
   addUser(user: User) {
