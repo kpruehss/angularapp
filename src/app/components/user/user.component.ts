@@ -12,5 +12,11 @@ export class UserComponent implements OnInit {
   // Methods
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.user = {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'john@gmail.com',
+    };
+  }
 }
