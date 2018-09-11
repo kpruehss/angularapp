@@ -11,6 +11,12 @@ A sandbox app to practice various aspects of the angular framework!
 
 ---
 
+### Deployment
+
+The deployed app can be reached [HERE](https://kpruehss.github.io/angularapp/)
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server
