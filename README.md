@@ -2,6 +2,18 @@
 
 A sandbox app to practice various aspects of the angular framework!
 
+Implements:
+
+- full CRUD through http requests to jsonplaceholder API
+- Angular Template Driven Forms + Validation
+- Services | Dependency Injection
+
+Unfinished:
+
+- Routing
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server
