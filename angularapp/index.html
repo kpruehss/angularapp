@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angularapp</title>
+  <base href="/">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="favicon.ico"
+  >
+  <script>
+    // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+<link rel="stylesheet" href="styles.ad36edecf20fc60c1d1d.css"></head>
+
+<body>
+  <app-root></app-root>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.e3633a42d1123afc5fc9.js"></script><script type="text/javascript" src="scripts.4852ce0dfc8a943e4c48.js"></script><script type="text/javascript" src="main.33713226a92fce2e88c4.js"></script></body>
+
+</html>
