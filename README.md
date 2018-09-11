@@ -5,7 +5,7 @@ A sandbox app to practice various aspects of the angular framework!
 Implements:
 
 - full CRUD through http requests to jsonplaceholder API
-- Angular Template Driven Forms + Validation
+- Template Driven Forms + Validation
 - Services | Dependency Injection
 
 Unfinished:
