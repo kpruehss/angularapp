@@ -7,10 +7,13 @@ A sandbox app to practice various aspects of the angular framework!
 - full CRUD through http requests to jsonplaceholder API
 - Template Driven Forms + Validation
 - Services | Dependency Injection
-
-### Unfinished:
-
 - Routing
+
+---
+
+Deployed at:
+
+- [here](ttps://kpruehss.github.io/angularapp/)
 
 ---
 
