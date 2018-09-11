@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Post } from '../../models/Post';
 import { PostService } from '../../services/post.service';
 
@@ -8,6 +8,10 @@ import { PostService } from '../../services/post.service';
   styleUrls: ['./post-form.component.css'],
 })
 export class PostFormComponent implements OnInit {
+  post: Post;
+  @Output()
+  newPost: EventEmitter<Post> = new EventEmitter();
+
   constructor(private postService: PostService) {}
 
   ngOnInit() {}
@@ -17,7 +21,7 @@ export class PostFormComponent implements OnInit {
       alert('Please add post');
     } else {
       this.postService.savePost({ title, body } as Post).subscribe(post => {
-        console.log(post);
+        this.newPost.emit(post);
       });
     }
   }
